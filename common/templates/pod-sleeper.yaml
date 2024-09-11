@@ -6,7 +6,7 @@ metadata:
     local: {{ .Values.global.dummyAnnotation }}
     extern: {{ .Values.global.dummyAnnotationExtern }}
     dummyClusterValue: {{ .Values.global.dummyClusterValue }}
-    restart: {{ .Values.operate.restart }}
+    restart: {{ .Values.operate.restart | quote }}
 spec:
   containers:
   - name: ubuntu
